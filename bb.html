@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        width: 1000px;
+      }
+      .header {
+        width: 100%;
+        height: 100px;
+        background: yellow;
+      }
+      .content {
+        width: 100%;
+        height: 300px;
+        background: blue;
+      }
+      .footer {
+        width: 100%;
+        height: 100px;
+        background: yellow;
+      }
+      .section1 {
+        width: 50%;
+        height: 100%;
+        background: pink;
+        float: left;
+      }
+      .section1:nth-child(1) {
+        background: gray;
+      }
+      .section2 {
+        width: 25%;
+        height: 100%;
+        background: lawngreen;
+        float: left;
+      }
+      .section2:nth-child(odd) {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header"></div>
+      <div class="content">
+        <div class="section1"></div>
+        <div class="section1"></div>
+      </div>
+      <div class="content">
+        <div class="section2"></div>
+        <div class="section2"></div>
+        <div class="section2"></div>
+        <div class="section2"></div>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
