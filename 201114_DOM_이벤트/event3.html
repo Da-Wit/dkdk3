@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="text"></textarea>
+    <button id="bt">button</button>
+    <div id="num">0</div>
+    <script>
+        const text = document.getElementById('text');
+        const bt = document.getElementById('bt');
+        const num = document.getElementById('num');
+        
+        text.onkeyup= function() {
+            console.log(text.value.length)
+            num.innerText = text.value.length;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <button id="reset">reset</button>
+    <div><input value="0" id="num" readonly>
+    <span >milliseconds</span>
+    </div>
+    <script>
+        let start = document.getElementById('start');
+        let stop = document.getElementById('stop');
+        let reset = document.getElementById('reset');
+        let num = document.getElementById('num');
+        
+        let timer = 0;
+        let iterator;
+        let alreadyRunning = false;
+        
+        start.onclick = function() {
+            if(alreadyRunning=== false) {
+                alreadyRunning = true;
+                iterator = setInterval(function() {
+                timer++;
+                num.value= timer;
+            },1)
+            }
+        }
+            stop.onclick = function () {
+                clearInterval(iterator)
+                alreadyRunning = false;
+        }
+        reset.onclick = function() {
+            clearInterval(iterator)
+            timer = 0;
+            alreadyRunning = false;
+            num.value= timer;}
+
+        
+        setInterval(function() {
+            
+        })
+    </script>
+</body>
+</html>
