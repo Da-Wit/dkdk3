@@ -1,160 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <table id="template" style="width: 80vh; 
-    height:  80vh;
-    border : 2px solid black;
-    margin : 0 auto;">
-        <tr>
-            <th style="background : red;" id="start">
-            <div id="ball"><img style="width: 100%; height: 100%;" src="https://png.pngtree.com/png-vector/20190912/ourlarge/pngtree-modren-ball-icon-vector-png-image_1726872.jpg"></div>
-            </th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-        </tr>
-        <tr>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-        </tr>
-        <tr> 
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th><th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-        </tr>
-        <tr>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-        </tr>
-        <tr>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-        </tr>
-        <tr>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-        </tr>
-        <tr>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-        </tr>
-        <tr>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-             <th style="background: none; border : none;" id="void"></th>
-             <th style="background: none; border : none;" id="void"></th>
-             <th style="background: none; border : none;" id="void"></th>
-             <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background: none; border : none;" id="void"></th>
-            <th style="background : blue;" id="end"></th>
-        </tr>
-    </table>
+  </head>
+  <body>
+    <div id="app"></div>
     <script>
-        let gride= document.querySelectorAll('th');
-        let ball = document.getElementById('ball');
-        console.log(gride);
-        let x = 0;
-        let y = 0;
-        window.onkeydown = function(e) {
-            if(e.keyCode === 37) { 
-                if()
-                /* left */}
-            if(e.keyCode === 38) { /* top */}
-            if(e.keyCode === 39) { /* right */}
-            if(e.keyCode === 40) { /* bottom */}
+      const tableStart = `<table id="template" style="width: 700px; height: 700px; margin: 0 auto">`;
+      const tableEnd = `</table>`;
+      const value = `s10000000001110001100001100110010010010000111011100010001010001111101011000001111000111001101110000e`;
+      const voidSpace = `<th style="background: none; border: none" class="void"></th>`;
+      const ball = `<div id="ball"><img style="width: 90%; height: 90%" src="https://png.pngtree.com/png-vector/20190912/ourlarge/pngtree-modren-ball-icon-vector-png-image_1726872.jpg"/></div>`;
+      const path = `<th></th>`;
+      const start = `<th style="background: red" id="start">${ball}</th>`;
+      const end = `<th style="background: blue" id="end"></th>`;
+      const trStart = "<tr>";
+      const trEnd = "</tr>";
+      const app = document.getElementById("app");
+
+      let newHTML = ``;
+      newHTML += tableStart;
+      for (let i = 0; i < value.length; i++) {
+        if (i % 10 === 0) {
+          newHTML += trStart;
         }
+        switch (value[i]) {
+          case "s": {
+            newHTML += start;
+            break;
+          }
+          case "1": {
+            newHTML += path;
+            break;
+          }
+          case "0": {
+            newHTML += voidSpace;
+            break;
+          }
+          case "s": {
+            newHTML += end;
+            break;
+          }
+          default:
+            newHTML += " ";
+        }
+        if (i % 10 === 9) {
+          newHTML += trEnd;
+        }
+      }
+      newHTML += tableEnd;
+      app.innerHTML = newHTML;
+    </script>
+
+    <script>
+      let gride = document.querySelectorAll("th");
+      const getBallIndex = (inputGride) => {
+        let X;
+        let Y;
+        inputGride.forEach((val, index) => {
+          if (val.innerHTML !== "") {
+            let indexToString = JSON.stringify(index);
+            if (indexToString.length === 1) {
+              X = parseInt(indexToString[0], 10);
+              Y = 0;
+            } else {
+              X = parseInt(indexToString[1], 10);
+              Y = parseInt(indexToString[0], 10);
+            }
+          }
+        });
+        return [X, Y];
+      };
+      const checkIndex = (index) =>
+        index >= 0 && index <= 99 && gride[index].className !== "void";
+      const changeInnerHTML = (current, next) => {
+        gride[next].innerHTML = gride[current].innerHTML;
+        gride[current].innerHTML = "";
+      };
+      window.onkeyup = function (e) {
+        let [x, y] = getBallIndex(gride);
+        let currentIndex = 10 * y + x;
+        // left
+        if (e.keyCode === 37) {
+          const nextIndex = 10 * y + x - 1;
+          if (x !== 0 && checkIndex(nextIndex)) {
+            changeInnerHTML(currentIndex, nextIndex);
+          }
+        }
+        // top
+        if (e.keyCode === 38) {
+          const nextIndex = 10 * (y - 1) + x;
+          if (y !== 0 && checkIndex(nextIndex)) {
+            changeInnerHTML(currentIndex, nextIndex);
+          }
+        }
+        // right
+        if (e.keyCode === 39) {
+          const nextIndex = 10 * y + x + 1;
+          if (x !== 9 && checkIndex(nextIndex)) {
+            changeInnerHTML(currentIndex, nextIndex);
+          }
+        }
+        // bottom
+        if (e.keyCode === 40) {
+          const nextIndex = 10 * (y + 1) + x;
+          if (y !== 9 && checkIndex(nextIndex)) {
+            changeInnerHTML(currentIndex, nextIndex);
+          }
+        }
+        console.log({ x, y });
+      };
     </script>
     <style>
-        th {
-            width: 10%;
-            height: 10%;
-            border: 1px solid black;
-        }
+      th {
+        width: 10%;
+        height: 10%;
+        background: black;
+      }
     </style>
-</body>
+  </body>
 </html>
