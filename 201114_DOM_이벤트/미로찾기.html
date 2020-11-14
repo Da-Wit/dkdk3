@@ -39,7 +39,7 @@
             newHTML += voidSpace;
             break;
           }
-          case "s": {
+          case "e": {
             newHTML += end;
             break;
           }
@@ -83,6 +83,9 @@
         let [x, y] = getBallIndex(gride);
         let currentIndex = 10 * y + x;
         // left
+        if (x === 9 && y === 9) {
+          alert("done!");
+        }
         if (e.keyCode === 37) {
           const nextIndex = 10 * y + x - 1;
           if (x !== 0 && checkIndex(nextIndex)) {
@@ -106,8 +109,12 @@
         // bottom
         if (e.keyCode === 40) {
           const nextIndex = 10 * (y + 1) + x;
+
           if (y !== 9 && checkIndex(nextIndex)) {
             changeInnerHTML(currentIndex, nextIndex);
+          }
+          if (nextIndex === 99) {
+            console.log("done!!!");
           }
         }
       };
