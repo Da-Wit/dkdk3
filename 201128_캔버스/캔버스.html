@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script type="text/javascript">
+        const canvas = document.getElementById('canvas')
+
+        canvas.style.background = 'pink'
+        const ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(50, 50); // x, y
+        ctx.lineTo(200, 50);
+        ctx.lineWidth = 20;
+        ctx.lineCap = 'round'
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.rect(100, 100, 200, 200); // x, y, w, h
+        ctx.strokeStyle = 'white'
+        ctx.fillStyle = 'white'
+        ctx.lineWidth = 20;
+        ctx.lineJoin = 'round'
+        ctx.stroke();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.rect(150, 150, 200, 200); // x, y, w, h
+        ctx.strokeStyle = 'black'
+        ctx.fillStyle = 'white'
+        ctx.lineWidth = 20;
+        ctx.lineJoin = 'round'
+        ctx.stroke();
+        ctx.fill();
+        
+
+        ctx.beginPath();
+        ctx.arc(200,200, 100,0,Math.PI,true); 
+        // x, y, r, start-angle, end-angle, 시계방향(false, 기본값임) or 반시계방향(true)
+        ctx.fillStyle = 'blue'
+        ctx.fill();
+        const TEXT = 'test test test';
+        ctx.fillStyle = 'black';
+        ctx.font = 'bold 30px Arial'
+        ctx.fillText(TEXT,300,300) // 문자열, x, y, 
+
+
+    </script>
+
+</body>
+
+</html>
